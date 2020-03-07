@@ -1,0 +1,9 @@
+<div class="all" *ngIf="course">
+  <h2>{{ course.name | uppercase }} Details</h2>
+  <div>id: {{ course.id }}</div>
+  <div>Rate:</div>
+  <app-rate></app-rate>
+  <br />
+  <br />
+  <p>{{ course.description }}</p>
+</div>

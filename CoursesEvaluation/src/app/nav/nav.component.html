@@ -1,0 +1,49 @@
+<h1>{{ title }}</h1>
+<nav class="nav nav-pills navigation">
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      (click)="selectedCourses()"
+      [ngClass]="nav === 0 ? 'nav-link active' : 'nav-link'"
+      routerLink="/courses"
+      >Courses</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      (click)="selectedAdd()"
+      [ngClass]="nav === 1 ? 'nav-link active' : 'nav-link'"
+      routerLink="/add-course"
+      >Add course</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      (click)="selectedSearch()"
+      [ngClass]="nav === 2 ? 'nav-link active' : 'nav-link'"
+      routerLink="/search"
+      >Search course</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      (click)="selectedLogin()"
+      [ngClass]="nav === 3 ? 'nav-link active' : 'nav-link'"
+      routerLink="/login"
+      >Login</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      (click)="selectedRegistration()"
+      [ngClass]="nav === 4 ? 'nav-link active' : 'nav-link'"
+      routerLink="/registration"
+      >Registration</a
+    >
+  </li>
+</nav>
+<router-outlet></router-outlet>

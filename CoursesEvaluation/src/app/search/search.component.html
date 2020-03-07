@@ -1,0 +1,53 @@
+<div id="allform">
+  <form role="form">
+    <div class="form-group">
+      <label>Subject</label>
+      <input
+        placeholder="Nazwa szukanego kursu"
+        name="name"
+        [(ngModel)]="name"
+        type="text"
+        class="validate"
+      />
+      <br /><br />
+
+      <div class="custom-slider">
+        <label>ECTS:</label>
+        <ng5-slider
+          [(value)]="minEcts"
+          [(highValue)]="maxEcts"
+          [options]="ectsOptions"
+        ></ng5-slider>
+      </div>
+
+      <div class="custom-slider">
+        <label>Rate: </label>
+        <ng5-slider
+          [(value)]="minRate"
+          [(highValue)]="maxRate"
+          [options]="rateOptions"
+        ></ng5-slider>
+      </div>
+      <div class="custom-slider">
+        <label>Term </label>
+        <ng5-slider
+          [(value)]="minTerm"
+          [(highValue)]="maxTerm"
+          [options]="termOptions"
+        ></ng5-slider>
+      </div>
+
+      <div class="submit">
+        <hr />
+        <button class="btn btn-outline-info" (click)="filter()">Search</button>
+        <button
+          class="btn btn-outline-dark float-right"
+          (click)="clearFilter()"
+        >
+          Wyczyść
+        </button>
+      </div>
+    </div>
+  </form>
+  {{ courses[4].id }}
+</div>
